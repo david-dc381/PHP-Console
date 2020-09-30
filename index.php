@@ -88,6 +88,43 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: Switch.</h4>
+                    <?php
+                        $numero = 10;
+
+                        switch ($numero) {
+                            case 1:
+                                echo "Calificación muy baja";
+                                break;
+                            case 2:
+                            case 4:
+                                echo "Calificación baja";
+                                break;
+                            case 6:
+                                echo "Calificación media";
+                                break;
+                            case 8:
+                                echo "Calificación buena";
+                                break;
+                            case 10:
+                                echo "Calificación excelente";
+                                break;
+                            
+                                
+                            default:
+                                echo "La calificación no es válida";
+                                break;
+                        }
+                       
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
