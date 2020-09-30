@@ -125,6 +125,34 @@
         </div>
 
 
+        <div class="row">
+            <div class="col-6">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: While</h4>
+                    <?php
+                        $numero = 0;
+                        
+                        while ($numero < 5) {
+                            $numero++;
+                            echo "El número es: ".$numero."<br>";
+                        }
+                    ?>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: For</h4>
+                    <?php
+                       for ($i=1; $i <= 5 ; $i++) { 
+                            echo "El número es: ".$numero."<br>";
+                       }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
