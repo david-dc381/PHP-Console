@@ -23,7 +23,11 @@
 
     <div class="container">
         <div class="row">
-            
+        <div class="p-3 m-2 bg-primary text-white">
+            <?php
+                echo "Hello Friends";
+            ?>
+        </div>
         </div>
     </div>
 
