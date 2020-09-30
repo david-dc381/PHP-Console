@@ -65,6 +65,29 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: Condicionales.</h4>
+                    <?php
+                        $name = "Robin";
+                        $year = 2000;
+
+                        if ($name == "Robin" and $year == 1900) {
+                            echo "It's you";
+
+                        } elseif ($name="Robin" and $year == 2000) {
+                            echo "Maybe it's you";
+                        } else {
+                            echo "It´s not you";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
