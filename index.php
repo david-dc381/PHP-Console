@@ -154,7 +154,7 @@
 
         <div class="row">
             <div class="col-6">
-                <div class="p-3 m-2 bg-primary text-white">
+                <div class="p-3 m-2 bg-warning text-white">
                     <h4>Clase: Array</h4>
                     <?php
                         $numero = [1,5,8,9];
@@ -168,7 +168,7 @@
             </div>
 
             <div class="col-6">
-                <div class="p-3 m-2 bg-primary text-white">
+                <div class="p-3 m-2 bg-warning text-white">
                     <h4>Clase: Array</h4>
                     <?php
                       $names = ["Pedro", "Juan", "Andre", "Santiago"];
@@ -181,6 +181,55 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-warning text-white">
+                    <h4>Clase: Foreach</h4>
+                    <?php
+                        $names = ["Pedro", "Juan", "Andre", "Santiago"];
+                        
+                        foreach ($names as $name) {
+                            echo $name . "<br>";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="p-3 m-2 bg-warning text-white">
+                    <h4>Clase: Break</h4>
+                    <?php
+                      $names = ["Pedro", "Juan", "Andre", "Santiago"];
+                        
+                      foreach ($names as $name) {
+                          if ($name == "Santiago") {
+                            break;
+                          }
+                          echo $name . "<br>";
+                      }
+                        
+                    ?>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="p-3 m-2 bg-warning text-white">
+                    <h4>Clase: Continue</h4>
+                    <?php
+                      $names = ["Pedro", "Juan", "Andre", "Santiago"];
+                        
+                      foreach ($names as $name) {
+                        if ($name == "Andre") {
+                          continue;
+                        }
+                        echo $name . "<br>";
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
 
     </div>
 
