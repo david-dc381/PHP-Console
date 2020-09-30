@@ -25,7 +25,19 @@
         <div class="row">
         <div class="p-3 m-2 bg-primary text-white">
             <?php
-                echo "Hello Friends";
+               /* 
+                * Comentarios.
+                * Declaramos variables.
+                * Concatenamos varibles
+                * Imprimimos tipo de variables.
+                */
+              $name = "Gus";
+              $isdOld = true;
+              $year = 1990;
+              $km = 10.5;
+            
+              echo "Hello " . $name . " you born in the year " . $year . ", and you are to " . $km . " distance.<br>";
+              echo "The variable <code>$</code><code>name</code> is a type of " .gettype($name);
             ?>
         </div>
         </div>
