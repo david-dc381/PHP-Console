@@ -152,6 +152,35 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-6">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: Array</h4>
+                    <?php
+                        $numero = [1,5,8,9];
+                        
+                        for ($i=0; $i < count($numero) ; $i++) { 
+                            echo $numero[$i]. "<br>";
+                        }
+                        
+                    ?>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: Array</h4>
+                    <?php
+                      $names = ["Pedro", "Juan", "Andre", "Santiago"];
+                        
+                      for ($i=0; $i < count($names) ; $i++) { 
+                          echo $names[$i]. "<br>";
+                      }
+                    ?>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
