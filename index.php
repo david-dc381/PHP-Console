@@ -23,23 +23,47 @@
 
     <div class="container">
         <div class="row">
-        <div class="p-3 m-2 bg-primary text-white">
-            <?php
-               /* 
-                * Comentarios.
-                * Declaramos variables.
-                * Concatenamos varibles
-                * Imprimimos tipo de variables.
-                */
-              $name = "Gus";
-              $isdOld = true;
-              $year = 1990;
-              $km = 10.5;
-            
-              echo "Hello " . $name . " you born in the year " . $year . ", and you are to " . $km . " distance.<br>";
-              echo "The variable <code>$</code><code>name</code> is a type of " .gettype($name);
-            ?>
+            <div class="col-12">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: Variables, tipos de datos.</h4>
+                    <?php
+                    /* 
+                        * Comentarios.
+                        * Declaramos variables.
+                        * Concatenamos varibles
+                        * Imprimimos tipo de variables.
+                        */
+                    $name = "Gus";
+                    $isdOld = true;
+                    $year = 1990;
+                    $km = 10.5;
+                    
+                    echo "Hello " . $name . " you born in the year " . $year . ", and you are to " . $km . " distance.<br>";
+                    echo "The variable <code>$</code><code>name</code> is a type of " .gettype($name);
+                    ?>
+                </div>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h4>Clase: Operadores.</h4>
+                    <?php
+                        $num1 = 3;
+                        $num2 = 5;
+
+                        $num1++;
+                        $num2--;
+
+                        echo "La suma es: " . ($num1+$num2) . "<br>";
+                        echo "La resta es: " . ($num1-$num2) . "<br>";
+                        echo "La multiplicación es: " . ($num1*$num2) . "<br>";
+                        echo "La división es: " . ($num1/$num2) . "<br>";
+                        echo "El modulo es: " . ($num1%$num2) . "<br>";
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 
