@@ -259,6 +259,48 @@
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>POO</h4>
+                    <?php
+                        class Mascota {
+                            public $nombre;
+                            public $tipo;
+                            public $patas;
+
+                            // La función del constructor, construye que es lo que queremos pasar al objeto.
+                            function __construct($nombre, $tipo, $patas)
+                            {
+                                $this->nombre = $nombre;
+                                $this->tipo = $tipo;
+                                $this->patas = $patas;
+                            }
+
+                            // Creamos un método(función) para mostrar los resultados
+                            public function getDescription() {
+                                if ($this->patas == 0) {
+                                    echo "Tu mascota es un " .$this->tipo. " y se llama " .$this->nombre.  " y no tiene patas.";
+                                } else {
+                                    echo "Tu mascota es un " .$this->tipo. " y se llama " .$this->nombre. " y tiene " .$this->patas. " patas.";
+                                }
+                            }
+                        }
+                        // Instanciamos los objetos
+                        $perro = new Mascota("Firulais", "perro", 4);
+                        $gato = new Mascota("Figaro", "gato", 4);
+                        $pez = new Mascota("Qwerty", "pez", 0);
+                        
+                        // Imprimimos los métodos de los objetos
+                        echo $perro->getDescription(). "<br>";
+                        echo $gato->getDescription(). "<br>";
+                        echo $pez->getDescription();
+                    ?>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
