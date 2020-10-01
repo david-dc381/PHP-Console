@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="p-3 m-2 bg-primary text-white">
-                    <h4>Clase: Variables, tipos de datos.</h4>
+                    <h4>Variables, tipos de datos.</h4>
                     <?php
                     /* 
                         * Comentarios.
@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="p-3 m-2 bg-primary text-white">
-                    <h4>Clase: Operadores.</h4>
+                    <h4>Operadores.</h4>
                     <?php
                         $num1 = 3;
                         $num2 = 5;
@@ -70,7 +70,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="p-3 m-2 bg-primary text-white">
-                    <h4>Clase: Condicionales.</h4>
+                    <h4>Condicionales.</h4>
                     <?php
                         $name = "Robin";
                         $year = 2000;
@@ -91,7 +91,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="p-3 m-2 bg-primary text-white">
-                    <h4>Clase: Switch.</h4>
+                    <h4>Switch.</h4>
                     <?php
                         $numero = 10;
 
@@ -128,7 +128,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="p-3 m-2 bg-primary text-white">
-                    <h4>Clase: While</h4>
+                    <h4>While</h4>
                     <?php
                         $numero = 0;
                         
@@ -142,7 +142,7 @@
 
             <div class="col-6">
                 <div class="p-3 m-2 bg-primary text-white">
-                    <h4>Clase: For</h4>
+                    <h4>For</h4>
                     <?php
                        for ($i=1; $i <= 5 ; $i++) { 
                             echo "El número es: ".$numero."<br>";
@@ -155,7 +155,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="p-3 m-2 bg-warning text-white">
-                    <h4>Clase: Array</h4>
+                    <h4>Array</h4>
                     <?php
                         $numero = [1,5,8,9];
                         
@@ -169,7 +169,7 @@
 
             <div class="col-6">
                 <div class="p-3 m-2 bg-warning text-white">
-                    <h4>Clase: Array</h4>
+                    <h4>Array</h4>
                     <?php
                       $names = ["Pedro", "Juan", "Andre", "Santiago"];
                         
@@ -184,7 +184,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="p-3 m-2 bg-warning text-white">
-                    <h4>Clase: Foreach</h4>
+                    <h4>Foreach</h4>
                     <?php
                         $names = ["Pedro", "Juan", "Andre", "Santiago"];
                         
@@ -199,7 +199,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="p-3 m-2 bg-warning text-white">
-                    <h4>Clase: Break</h4>
+                    <h4>Break</h4>
                     <?php
                       $names = ["Pedro", "Juan", "Andre", "Santiago"];
                         
@@ -216,7 +216,7 @@
 
             <div class="col-6">
                 <div class="p-3 m-2 bg-warning text-white">
-                    <h4>Clase: Continue</h4>
+                    <h4>Continue</h4>
                     <?php
                       $names = ["Pedro", "Juan", "Andre", "Santiago"];
                         
@@ -226,6 +226,34 @@
                         }
                         echo $name . "<br>";
                     }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-warning text-white">
+                    <h4>Funciones</h4>
+                    <?php
+                      function calc($sign, $num1, $num2) {
+                          switch ($sign) {
+                              case '+':
+                                  return $num1 + $num2;
+                                  break;
+                              case '-':
+                                  return $num1 - $num2;
+                                  break;
+                              default:
+                                  return 0;
+                                  break;
+                          }
+                      }
+
+                      $result = calc('+', 8, 5);
+                      echo "El resultado es: " . $result;
+                        
                     ?>
                 </div>
             </div>
