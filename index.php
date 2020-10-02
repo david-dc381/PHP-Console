@@ -476,6 +476,25 @@
             </div>
         </div>
 
+        <?php
+            include('automotores/auto.php');
+            include('automatizacion/auto.php');
+        ?>
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Namespaces</h4>
+                    <?php 
+                       $automotor = new \automotores\Auto("Mercedes Benz", 4, 4);
+                       $automatizador = new \automatizacion\Auto("Bot Social", 10, "Miércoles 2 por uno.");
+                        
+                       echo $automotor->getAuto() . "<br>";
+                       echo $automatizador->getAuto();
+                    ?>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
