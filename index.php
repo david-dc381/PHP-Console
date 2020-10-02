@@ -364,6 +364,70 @@
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col-6">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Formulario</h4>
+                    <form class="form-inline" action="#" method="POST">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" id="saludo" name="saludo" placeholder="Di algo...">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Saludar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Formulario(Saludar)</h4>
+                    <?php
+                      echo "<br>";
+                      if (isset($_POST['saludo'])) {
+                          echo $_POST['saludo'];
+                      } else {
+                          echo "Esperando tu saludo";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Formulario (Suma)</h4>
+                    <form class="form-inline" action="#" method="POST">
+                        <div class="form-group mx-sm-1 mb-2">
+                            <input type="number" class="form-control" id="n1" name="n1" placeholder="Número 1">
+                        </div>
+                        <div class="form-group mx-sm-1 mb-2">
+                            <input type="number" class="form-control" id="n2" name="n2" placeholder="Número 2">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Sumar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Formulario (Resultado)</h4>
+                    <?php
+                      echo "<br>";
+                      if (isset($_POST['n1']) and isset($_POST['n2'])) {
+                            $n1 = $_POST['n1'];
+                            $n2 = $_POST['n2'];
+                            $r = $n1 + $n2;
+                            echo $r;
+                      } else {
+                          echo "Esperando la suma";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
