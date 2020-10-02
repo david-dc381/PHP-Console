@@ -301,6 +301,69 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Herencia</h4>
+                    <?php
+                        class Mascota1 {
+                            public $nombre;
+                            public $patas;
+
+                            function __construct($nombre, $patas)
+                            {
+                                $this->nombre = $nombre;
+                                $this->patas = $patas;
+                            }
+                            
+                            function eat() {
+                                return "Estoy comiendo!";
+                            }
+                        }
+
+                        class Perro extends Mascota1 {
+                            function run() {
+                                return "Estoy coriendo";
+                            }
+                        }
+
+                        class Gato extends Mascota1 {}
+
+                        $firulais = new Perro('Firulasi', 4);
+                        $figaro = new Gato('figaro', 4);
+
+                        echo $firulais->run();
+                        echo $figaro->eat();
+                       
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Método Static (Calculadora)</h4>
+                    <?php
+                        class calculadora {
+                            public static function sumar($num1, $num2) {
+                                return $num1 + $num2;
+                            }
+
+                            static function restar($num1, $num2) {
+                                return $num1 - $num2;
+                            }
+                        }
+                        // static, hace que no intanciebos la clase
+                        echo "La suma es: " . calculadora::sumar(5,8) . "<br>";
+                        echo "La resta es: " . calculadora::restar(8,6) . "<br>";
+                       
+                    ?>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
