@@ -368,7 +368,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="p-3 m-2 bg-danger text-white">
-                    <h4>Formulario</h4>
+                    <h4>Formulario POST</h4>
                     <form class="form-inline" action="#" method="POST">
                         <div class="form-group mx-sm-3 mb-2">
                             <input type="text" class="form-control" id="saludo" name="saludo" placeholder="Di algo...">
@@ -380,7 +380,7 @@
 
             <div class="col-6">
                 <div class="p-3 m-2 bg-danger text-white">
-                    <h4>Formulario(Saludar)</h4>
+                    <h4>Formulario(Saludar) POST</h4>
                     <?php
                       echo "<br>";
                       if (isset($_POST['saludo'])) {
@@ -397,7 +397,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="p-3 m-2 bg-danger text-white">
-                    <h4>Formulario (Suma)</h4>
+                    <h4>Formulario (Suma) POST</h4>
                     <form class="form-inline" action="#" method="POST">
                         <div class="form-group mx-sm-1 mb-2">
                             <input type="number" class="form-control" id="n1" name="n1" placeholder="Número 1">
@@ -412,7 +412,7 @@
 
             <div class="col-6">
                 <div class="p-3 m-2 bg-danger text-white">
-                    <h4>Formulario (Resultado)</h4>
+                    <h4>Formulario (Resultado) POST</h4>
                     <?php
                       echo "<br>";
                       if (isset($_POST['n1']) and isset($_POST['n2'])) {
@@ -427,6 +427,55 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Formulario (Resta) GET</h4>
+                    <form class="form-inline" action="#" method="GET">
+                        <div class="form-group mx-sm-1 mb-2">
+                            <input type="number" class="form-control" id="n1" name="n1" placeholder="Número 1">
+                        </div>
+                        <div class="form-group mx-sm-1 mb-2">
+                            <input type="number" class="form-control" id="n2" name="n2" placeholder="Número 2">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Restar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Formulario (Resultado) GET</h4>
+                    <?php
+                      echo "<br>";
+                      if (isset($_GET['n1']) and isset($_GET['n2'])) {
+                            $n1 = $_GET['n1'];
+                            $n2 = $_GET['n2'];
+                            $r = $n1 - $n2;
+                            echo $r;
+                      } else {
+                          echo "Esperando la resta";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+        
+        <?php include("person.php") ?>
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Include</h4>
+                    <?php 
+                        $person = new Person("Pedro", "Ramirez");
+                        echo $person->greetings();
+                    ?>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
