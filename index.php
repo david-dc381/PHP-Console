@@ -496,6 +496,23 @@
         </div>
 
 
+        <?php include('connection.php') ?>
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 m-2 bg-danger text-white">
+                    <h4>Base de Datos</h4>
+                    <?php 
+                       $persons = $connection->query('SELECT * FROM persons');
+
+                       foreach ($persons as $person) {
+                           echo "Nombre Completo: " . $person['firstname'] . " " . $person['lastname'] . "<br>";
+                       }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
